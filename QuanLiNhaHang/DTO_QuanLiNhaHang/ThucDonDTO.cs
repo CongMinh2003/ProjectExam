@@ -6,28 +6,32 @@ using System.Threading.Tasks;
 
 namespace DTO_QuanLiNhaHang
 {
-    public class ThucDon
+    public class ThucDonDTO
     {
         private string maMon;
         private string tenMon;
-        private float donGia;
+        private string hinhAnh;
+        private float donGia;        
 
         public string MaMon { get => maMon; set => maMon = value; }
         public string TenMon { get => tenMon; set => tenMon = value; }
-        public float DonGia { get => donGia; set => donGia = value; }
+        public string HinhAnh { get => hinhAnh; set => hinhAnh = value; }
+        public float DonGia { get => donGia; set => donGia = value; }  
 
-        public ThucDon()
+        public ThucDonDTO()
         {
             MaMon = "";
             TenMon = "";
-            DonGia = 0;
+            HinhAnh = "";
+            DonGia = 0;     
         }
 
-        public ThucDon(string maMon, string tenMon, float donGia)
+        public ThucDonDTO(string maMon, string tenMon, string hinhAnh , float donGia)
         {
             this.MaMon = maMon;
             this.TenMon = tenMon;
-            this.DonGia = donGia;
+            this.HinhAnh = hinhAnh;
+            this.DonGia = donGia;          
         }
     }
 }

@@ -50,7 +50,35 @@ namespace DAL_QuanLiNhaHang
             return data;
         }
 
+        public bool saveDatBan(DatBanDTO db)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string sql = @"INSERT INTO DatBan( MaDatBan, MaBan, MaKhachHang, TenKhachHang, SoLuongNguoi)
+                        VALUES ( @madatban, @maban, @makhachhang, @tenkhachhang, @soluongnguoi)";
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.Parameters.AddWithValue("@madatban", db.MaDatBan);
+                cmd.Parameters.AddWithValue("@maban", db.MaBan);
+                cmd.Parameters.AddWithValue("@makhachhang", db.MaKhachHang);
+                cmd.Parameters.AddWithValue("@tenkhachhang", db.TenKhachHang);
+                cmd.Parameters.AddWithValue("@soluongnguoi", db.SoLuongNguoi);
+                connection.Open();
+                int result = cmd.ExecuteNonQuery();
+                return (result >= 1);
+            }
+        }
 
+        //public bool updateBan()
+        //{
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        string sql = @"UPDATE BAN SET TenMon = @tenmon
+        //                    WHERE MaBan = @maban and SoLuongNguoi <= @soluongnguoi";
+        //        SqlCommand cmd = new SqlCommand(sql, connection);
+        //        cmd.Parameters.AddWithValue();
+        //        cmd.Parameters.AddWithValue();
+        //    }
+        //}
 
         
     }
