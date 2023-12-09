@@ -8,14 +8,13 @@ using DTO_QuanLiNhaHang;
 
 namespace BUS_QuanLiNhaHang
 {
-    public class sa
+    public class BusKhachHang
     {
-        Dataprovider dp = new Dataprovider();
+        Dataprovider khachHangDAL = new Dataprovider();
 
-        //Phương thức check Account
-        public bool CheckAccount(string tk, string mk)
+        public bool SAVEKhachHang(KhachHangDTO khachHang)
         {
-            return dp.CheckTK(tk, mk);
+            return khachHangDAL.saveKhachHang(khachHang);
         }
     }
 }

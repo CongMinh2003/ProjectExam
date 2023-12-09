@@ -6,32 +6,28 @@ using System.Threading.Tasks;
 
 namespace DTO_QuanLiNhaHang
 {
-    class BanDTO
+    public class BanDTO
     {
         private string maBan;
-        private string tenMon;
         private int soLuongNguoi;
-        private bool trangThai;
-
-        protected string MaBan { get => maBan; set => maBan = value; }
-        public string TenMon { get => tenMon; set => tenMon = value; }
-        protected int SoLuongNguoi { get => soLuongNguoi; set => soLuongNguoi = value; }
-        protected bool TrangThai { get => trangThai; set => trangThai = value; }       
+        private string trangThai;
 
         public BanDTO()
         {
             MaBan = "";
-            TenMon = "";
             SoLuongNguoi = 0;
-            TrangThai = true;
+            TrangThai = "";
         }
 
-        public BanDTO( string maBan, string tenMon, int soLuongNguoi, bool trangThai)
+        public BanDTO(string maBan, int soLuongNguoi, string trangThai)
         {
             this.MaBan = maBan;
-            this.TenMon = tenMon;
             this.SoLuongNguoi = soLuongNguoi;
             this.TrangThai = trangThai;
         }
+
+        public string MaBan { get => maBan; set => maBan = value; }
+        public int SoLuongNguoi { get => soLuongNguoi; set => soLuongNguoi = value; }
+        public string TrangThai { get => trangThai; set => trangThai = value; }
     }
 }

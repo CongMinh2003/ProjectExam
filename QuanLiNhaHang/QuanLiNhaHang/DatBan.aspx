@@ -33,7 +33,7 @@
                 <asp:TextBox ID="txtTenKhachHang" runat="server"></asp:TextBox>
             </div>
             <div class="khoangcach">
-                <label for="txtSoLuong" class="tieude">Số lượng</label>
+                <label for="txtSoLuong" class="tieude">Số lượng người</label>
                 <asp:TextBox ID="txtSoLuong" runat="server"></asp:TextBox>
             </div>
             <div class="khoangcach">
@@ -45,6 +45,9 @@
             </div>
             <div class="khoangcach" id="button">
                 <asp:Button ID="btnDatBan" runat="server" Text="Đặt bàn" OnClick="btnDatBan_Click" />
+            </div>
+            <div>
+                <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ using DTO_QuanLiNhaHang;
 
 namespace BUS_QuanLiNhaHang
 {
-    class BusThanhToan
+    public class BusThanhToan
     {
     }
 }

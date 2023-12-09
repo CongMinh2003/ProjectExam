@@ -41,8 +41,6 @@ namespace DTO_QuanLiNhaHang
             this.TenKhachHang = tenKhachHang;
             this.SoLuongNguoi = soLuongNguoi;
             this.TrangThai = trangThai;
-        }
-
-        
+        }  
     }
 }
